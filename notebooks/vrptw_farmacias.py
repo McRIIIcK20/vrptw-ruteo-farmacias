@@ -211,7 +211,7 @@ plt.tight_layout(); plt.savefig(FIG / "rutas_coquimbo.png", dpi=120); plt.show()
 
 # %%
 import folium
-mp = folium.Map(location=[-29.94, -71.29], zoom_start=12, tiles="cartodbpositron")
+mp = folium.Map(location=[-29.94, -71.29], zoom_start=12, tiles="OpenStreetMap")
 palette = ["#1f77b4", "#ff7f0e", "#2ca02c"]
 for k, r in solC["routes"].items():
     folium.PolyLine([pts[i] for i in r], color=palette[k - 1], weight=5, opacity=0.8,
